@@ -27,7 +27,7 @@ var server = http.createServer(function (request, response) {
     console.log(suffix)
     const hashMap = {
         ".html": "html",
-        ".js": "js",
+        ".js": "javascript",
         ".css": "css",
         ".jpg": "jpg",
         ".png": "png"
