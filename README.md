@@ -7,6 +7,6 @@ response.write(fs.readFileSync(./public${路径}))
 
 2. 设置Content-Type
 ~~~
-response.setHeader('Content-Type', `text/${hashMap[文件类型]};charset=utf-8`)
+response.setHeader('Content-Type', `${hashMap[后缀]};charset=utf-8`)
 ~~~
-用string.lastIndexOf(filePathath),再substring截取后缀（suffix），现在的后缀还带有“.”，利用哈希表得到对应不带“.”后缀。
+用string.lastIndexOf(filePathath),再substring截取后缀（suffix），利用哈希表得到后缀对应的text/xxx或者image/xxx文档类型。
