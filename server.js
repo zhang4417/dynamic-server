@@ -26,13 +26,13 @@ var server = http.createServer(function (request, response) {
     const suffix = filePath.substring(index)
     console.log(suffix)
     const hashMap = {
-        ".html": "html",
-        ".js": "javascript",
-        ".css": "css",
-        ".jpg": "jpg",
-        ".png": "png"
+        ".html": "text/html",
+        ".js": "text/javascript",
+        ".css": "text/css",
+        ".jpg": "image/jpg",
+        ".png": "image/png"
     }
-    response.setHeader('Content-Type', `text/${hashMap[suffix]};charset=utf-8`)
+    response.setHeader('Content-Type', `${hashMap[suffix]};charset=utf-8`)
     let content
     try {
         content = fs.readFileSync(`./public/${filePath}`)
