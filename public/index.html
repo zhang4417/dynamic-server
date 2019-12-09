@@ -5,14 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>html</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>初始网页</title>
 </head>
 
 <body>
     <P>默认初始网页</P>
-    <img src="./screenshot.jpg" alt="">
-    <script src="./main.js"></script>
+    <button type="button" id="signIn">登录</button>
+    <button type="button" id="signUp">注册</button>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $('#signIn').on('click', () => {
+            location.href = './signIn.html'
+        })
+        $('#signUp').on('click', () => {
+            location.href = './signUp.html'
+        })
+    </script>
 </body>
 
 </html>
